@@ -10,6 +10,17 @@ Microservices-Architektur](http://www.sigs-datacom.de/fachzeitschriften/javaspek
 You can read it online [here](https://www.innoq.com/de/articles/2016/09/consumer-driven-contracts/)
 or download as PDF [here](http://www.sigs-datacom.de/uploads/tx_dmjournals/vitz_JS_04_16_TaTZ.pdf).
 
+## Pact Broker
+
+This branch shows how to use the [Pact Broker](https://github.com/pact-foundation/pact_broker).
+Please follow the steps below before executing `mvn clean install`.
+
+```
+git clone https://github.com/DiUS/pact_broker-docker
+docker-machine create --virtualbox-memory "4096" --driver virtualbox pact
+eval $(docker-machine env pact)
+docker-compose -f pact_broker-docker/docker-compose.yml up -d
+```
 
 ## License
 
